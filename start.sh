@@ -6,12 +6,11 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
 
-
 function bashAndVimSetting() {
     # bash, vim 설정파일 복사
-    cp ./.bashrc ../;
-    cp ./.bash_profile ../;
-    cp ./.vimrc ../;
+    cp ./.bashrc ~/;
+    cp ./.bash_profile ~/;
+    cp ./.vimrc ~/;
 
     # vim vundle 설치
     rm -rf ~/.vim/bundle
