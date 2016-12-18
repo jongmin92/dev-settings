@@ -1,0 +1,57 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'fholgado/minibufexpl.vim'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+let mapleader=","
+
+" Colorscheme
+"let g:solarized_termcolors=256
+"set background=dark
+colorscheme desert
+
+let g:ctrlp_mruf_case_sensitive = 0
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc
+set wildignore+=*.so,*.swp,*.zip,*.pyc
+set wildignore+=*/bower_components/*
+set wildignore+=*/node_modules/*
+set wildignore+=*/media/*
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_custom_ignore = {
+            \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+            \ 'file': '\.so$\|\.pyc$' }
+
+syntax on
+set nobackup
+set hlsearch
+set incsearch
+set ts=4
+set sw=4
+set si
+"set nohlsearch
+set sm "show match
+"imap { {^M}^[ko
+highlight Comment term=bold cterm=bold ctermfg=4
+set et
+
+imap <C-R> $param_arr = array_merge($_param_init, $param_arr);
+
+au BufNewFile,BufRead *.js set ts=2 sw=2
+au BufNewFile,BufRead *.php  set ts=4 sw=4
+au BufNewFile,BufRead *.py set ts=4 sw=4
+
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
