@@ -19,6 +19,7 @@ $ git clone https://github.com/kdhx92/dev-settings.git
 ## Apply [bash & vim] setting
 * If you want to set bash and vim like the image above, do the following
 **(I recommend that you back up your settings before doing so.)**
+
 <pre>
 $ git clone https://github.com/kdhx92/dev-settings.git
 $ cd dev-settings
