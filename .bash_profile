@@ -22,8 +22,10 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # MONGODB
 export PATH=/usr/local/mongodb/bin:$PATH
 # ANDROID_HOME
-export PATH=${PATH}:/Users/kimjongmin/Library/Android/sdk/platform-tools
-export PATH=${PATH}:/Users/kimjongmin/Library/Android/sdk/tools
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools/
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools/
+export PATH=${PATH}:${ANDROID_HOME}/build-tools/23.0.1/
 # NVM
 export NVM_DIR="/Users/kimjongmin/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
@@ -31,3 +33,6 @@ export NVM_DIR="/Users/kimjongmin/.nvm"
 # Setting PATH for Python 2.7
 # The original version is saved in .bash_profile.pysave
 export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+
+# ruby
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
